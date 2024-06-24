@@ -51,3 +51,4 @@ ggplot(data = louisiana_map) +
   annotate("text", x = Inf, y = -Inf, hjust = 1.1, vjust = -0.3,
            label = '"Cancer Alley" parishes highlighted in blue', color = "blue", size = 4, fontface = "bold")
 ```
+Louisiana, the Bayou State, is home to pelicans, crawfish, gumbo, Mardi Gras, and of course, Cancer Alley, where 25% of the nation's petrochemicals are produced. This area of the state consists of the East Baton Rouge, West Baton Rouge, Iberville, Ascension, St. James, St. John the Baptist, St. Charles, Jefferson, and Orleans parishes, and has been infamous for decades as a cancer hot spot. This project attempts to verify if Cancer Alley is still a mass producer of cancer. From this graphic, we can see that some of the highest cancer rates in the state are located in Cancer Alley, especially in Ibervillle parish.

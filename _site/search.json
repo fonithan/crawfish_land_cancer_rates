@@ -1,9 +1,23 @@
 [
   {
+    "objectID": "sources.html",
+    "href": "sources.html",
+    "title": "Sources",
+    "section": "",
+    "text": "I sourced my data from the National Institute of Health’s National Cancer Institute’s State Cancer Profile on Louisiana (link here: https://statecancerprofiles.cancer.gov/incidencerates/index.php?stateFIPS=22&areatype=county&cancer=001&race=00&sex=0&age=001&type=incd&sortVariableName=rate&sortOrder=default&output=0#results). I had to remove punctuation from the parish names (a lot are named after saints), and put them all in lowercase. I only looked at the data on cancer rate (cases per 100,00 people), and ignored all other data points."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "Hey! My name’s Phanithan, I’m a high school student from Columbus, Ohio. My Github account link is https://github.com/fonithan, and you can contact me at kphanithan@gmail.com. My project takes a look at cancer rates in Louisiana by parish; here’s link to the Github repo if you want to check it out: https://github.com/fonithan/crawfish_land_cancer_rates.\nThis project was created as a part of Kane’s Data Science Bootcamp. Check out the link for more info: https://bootcamp.davidkane.info/."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Louisiana Cancer Rates",
+    "section": "",
+    "text": "Louisiana, the Bayou State, is home to pelicans, crawfish, gumbo, Mardi Gras, and of course, Cancer Alley, where 25% of the nation’s petrochemicals are produced. This area of the state consists of the East Baton Rouge, West Baton Rouge, Iberville, Ascension, St. James, St. John the Baptist, St. Charles, Jefferson, and Orleans parishes, and has been infamous for decades as a cancer hot spot. This project attempts to verify if Cancer Alley is still a mass producer of cancer. From this graphic, we can see that some of the highest cancer rates in the state are located in Cancer Alley, especially in Ibervillle parish."
   }
 ]

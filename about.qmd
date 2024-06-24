@@ -2,4 +2,6 @@
 title: "About"
 ---
 
-About this site
+Hey! My name's Phanithan, I'm a high school student from Columbus, Ohio. My Github account link is https://github.com/fonithan, and you can contact me at kphanithan@gmail.com. My project takes a look at cancer rates in Louisiana by parish; here's link to the Github repo if you want to check it out: https://github.com/fonithan/crawfish_land_cancer_rates. 
+
+This project was created as a part of Kane’s Data Science Bootcamp. Check out the link for more info: https://bootcamp.davidkane.info/.

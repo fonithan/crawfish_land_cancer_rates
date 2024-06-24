@@ -1,1 +1,1 @@
-Sitemap: https://bc3fa6e5-0e17-421a-a569-5a11ea3259f0.netlify.app/sitemap.xml
+Sitemap: https://kphanithan.quarto.pub/cancer-in-louisiana-parishes/sitemap.xml

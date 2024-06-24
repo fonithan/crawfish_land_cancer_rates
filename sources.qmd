@@ -1,0 +1,6 @@
+---
+title: "Sources"
+format: html
+---
+
+I sourced my data from the National Institute of Health's National Cancer Institute's State Cancer Profile on Louisiana (link here: https://statecancerprofiles.cancer.gov/incidencerates/index.php?stateFIPS=22&areatype=county&cancer=001&race=00&sex=0&age=001&type=incd&sortVariableName=rate&sortOrder=default&output=0#results). I had to remove punctuation from the parish names (a lot are named after saints), and put them all in lowercase. I only looked at the data on cancer rate (cases per 100,00 people), and ignored all other data points.
