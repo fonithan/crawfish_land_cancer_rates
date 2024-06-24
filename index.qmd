@@ -1,0 +1,53 @@
+---
+title: "Louisiana Cancer Rates"
+author: "Phanithan Konda"
+execute:
+  echo: FALSE
+---
+```{r}
+#| message: FALSE 
+#| warning: FALSE 
+# Load necessary libraries
+library(sf)
+library(ggplot2)
+library(dplyr)
+library(maps)
+
+# Read the relevant columns from the CSV file, skipping the non-data lines
+cancer_data <- read.csv("incd.csv", skip = 9, header = TRUE, colClasses = c("character", NA, "numeric", rep(NA, 9)))
+
+# Select only the first and third columns
+cancer_data <- cancer_data[, c(1, 3)]
+
+# Rename the columns for easier reference
+colnames(cancer_data) <- c("Parish", "Cancer_Rate")
+
+# Load Louisiana parish boundaries
+louisiana_map <- map_data("county") %>% 
+  filter(region == "louisiana")
+
+# Standardize the names to lowercase for merging
+cancer_data$Parish <- tolower(cancer_data$Parish)
+louisiana_map$subregion <- tolower(louisiana_map$subregion)
+
+# Merge the cancer data with the map data
+louisiana_map <- louisiana_map %>%
+  left_join(cancer_data, by = c("subregion" = "Parish"))
+
+# Define Cancer Alley parishes (example parishes, adjust as needed)
+cancer_alley_parishes <- tolower(c("East Baton Rouge", "West Baton Rouge", "Iberville", "Ascension", "St James", "St John the Baptist", "St Charles", "Jefferson", "Orleans"))
+
+# Add a column to identify Cancer Alley parishes
+louisiana_map <- louisiana_map %>%
+  mutate(is_cancer_alley = ifelse(subregion %in% cancer_alley_parishes, TRUE, FALSE))
+
+# Plot the map with cancer rates and labels
+ggplot(data = louisiana_map) +
+  geom_polygon(aes(x = long, y = lat, group = group, fill = Cancer_Rate), color = "black") +
+  geom_polygon(data = subset(louisiana_map, is_cancer_alley), aes(x = long, y = lat, group = group), fill = NA, color = "blue", size = 1.5) +
+  labs(title = "Cancer rates by parish in Louisiana", fill = "Cancer Rate (per 100,000)") +
+  theme_void() +
+  scale_fill_gradient(low = "pink", high = "red", na.value = "grey50") +
+  annotate("text", x = Inf, y = -Inf, hjust = 1.1, vjust = -0.3,
+           label = '"Cancer Alley" parishes highlighted in blue', color = "blue", size = 4, fontface = "bold")
+```
